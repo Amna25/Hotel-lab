@@ -4,17 +4,17 @@ db.dropDatabase();
 db.bookings.insertMany([
     {
         name : "Robert",
-        emailAdress : "Rbert@gmail.com",
+        emailAddress : "Rbert@gmail.com",
         checkIn : true
     },
     {
         name : "Andy",
-        emailAdress : "Andy@gmail.com",
+        emailAddress : "Andy@gmail.com",
         checkIn : false
     },
     {
         name : "Jill",
-        emailAdress : "Jill@gmail.com",
+        emailAddress : "Jill@gmail.com",
         checkIn : false
     }
 ])
