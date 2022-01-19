@@ -2,23 +2,23 @@ import React,{useState} from 'react';
 
  const BookingForm = ({addBooking}) => {
      const [name, setName] = useState("")
-     const [ emailAdress, setEmailAdress] = useState("")
+     const [ emailAddress, setEmailAddress] = useState("")
      const [checkIn, setCheckIn] =useState(false)
 
      const handleNameChange = event => setName(event.target.value)
-     const handleEmailChange = event => setEmailAdress(event.target.value)
+     const handleEmailChange = event => setEmailAddress(event.target.value)
 
     const  handleSubmit = (event) => {
         event.preventDefault();
             const booking={
             name,
-            emailAdress,
+            emailAddress,
             checkIn
         }
 
         addBooking(booking)
         setName("")
-        setEmailAdress("")
+        setEmailAddress("")
     }
 
 
@@ -32,11 +32,11 @@ import React,{useState} from 'react';
       onChange = {handleNameChange}
       required
       />
-      <label htmlFor="emailAdress">Email_Adress</label>
+      <label htmlFor="emailAdress">Email_Address</label>
       <input
       type="email"
       id = "email"
-      value = {emailAdress}
+      value = {emailAddress}
       onChange = {handleEmailChange}
       required
       />

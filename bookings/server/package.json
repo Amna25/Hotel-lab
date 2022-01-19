@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
     "mongodb": "^3.5.7"
   },
   "devDependencies": {
@@ -7,8 +9,8 @@
   },
   "scripts": {
     "start": "node server.js",
-    "server:dev" : "nodeman server.js",
-    "seeds" : "mongo < ./db/seeds.js"
+    "server:dev": "nodemon server.js",
+    "seeds": "mongo < ./db/seeds.js"
   },
   "name": "server",
   "version": "1.0.0",
