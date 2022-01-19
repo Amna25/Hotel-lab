@@ -1,8 +1,9 @@
 import React,{useState} from 'react';
+import { postBooking } from '../BookingService';
 
  const BookingForm = ({addBooking}) => {
      const [name, setName] = useState("")
-     const [ emailAddress, setEmailAddress] = useState("")
+     const [emailAddress, setEmailAddress] = useState("")
      const [checkIn, setCheckIn] =useState(false)
 
      const handleNameChange = event => setName(event.target.value)
@@ -11,11 +12,11 @@ import React,{useState} from 'react';
     const  handleSubmit = (event) => {
         event.preventDefault();
             const booking={
-            name,
-            emailAddress,
-            checkIn
-        }
-
+            "checkIn" : checkIn,
+            "emailAddress" : emailAddress,
+            "name" : name
+            }
+        console.log(booking)
         addBooking(booking)
         setName("")
         setEmailAddress("")
